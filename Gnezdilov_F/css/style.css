@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Source Serif Pro', serif;
+    src: url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;300;400;600;700&display=swap');
+}
+@font-face {
+    font-family: 'Tenor Sans', sans-serif;;
+    src: url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+}
+:root{
+    --color1: #4A3930;
+    --color2: #AEC5EB;
+}
+
+.upper-navbar{
+    color: var(--color1);
+    text-align: center;
+    padding-left: 0 auto;
+}
+
+.container{
+    padding-left: 0 auto;
+}
