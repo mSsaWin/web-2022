@@ -13,10 +13,24 @@
 
 .upper-navbar{
     color: var(--color1);
-    text-align: center;
-    padding-left: 0 auto;
+    
+    font-family: 'Source Serif Pro', serif;
+    /* font-size: 15px; */
 }
 
-.container{
-    padding-left: 0 auto;
+.location{
+    font-size: 13px;
+}
+
+.check_box{
+    /* border: solid 1px;
+    border-color: rgb(61, 61, 61);
+    background-color: #eee; */
+    
+    
+}
+
+.navbar_settings, footer{
+    background-color: #F8F9FA;
+    
 }

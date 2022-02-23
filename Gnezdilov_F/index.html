@@ -13,30 +13,63 @@
 </head>
 <body>
     <header>
+        <!-- Upper header -->
         <div class="container">
             <div class="row">
-                <div class="col-8 upper-navbar">
-                    <a class="nav-link float-start upper-navbar" href="#">Белгород</a>
+                <!-- Location -->
+                <div class="col check_box">
+                        <a class="nav-link upper-navbar location" href="#">
+                        <i class="icon-location"></i>
+                        Белгород
+                    </a>         
                 </div>
-                <div class="col-4">
+                <!-- Profile part -->
+                <div class="col-4 check_box p-0">
                     <nav class="nav justify-content-between">
-                        <a class="nav-link upper-navbar" href="#">Сообщения</a>
-                        <a class="nav-link upper-navbar" href="#">Избранное</a>
-                        <a class="nav-link upper-navbar" href="#">Кошелёк</a>
+                        <a class="nav-link upper-navbar" href="#">
+                            <i class="icon-mail"></i>
+                            Сообщения
+                        </a>
+                        <a class="nav-link upper-navbar" href="#">
+                            <i class="icon-heart-empty"></i>
+                            Избранное
+                        </a>
+                        <a class="nav-link upper-navbar" href="#">
+                            <i class="icon-wallet"></i>
+                            Кошелёк
+                        </a>
                       </nav>
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container">
+        <!-- Header -->
+        <nav class="navbar-light bg-light">
+            <div class="container ">
+                <!-- Logo -->
+                <div class="row">
+                    <div class="col-2 check_box navbar_settings">
+                        <a href="#">
+                            <img src="/Gnezdilov_F/img/Лого.svg">
+                        </a>
+                    </div>
+                    <!-- Search field -->
+                    <div class="col-7 check_box navbar ">
+                        <div class="input-group">
+                            <input type="search" class="form-control rounded" placeholder="Search" style aria-label="Search" aria-describedby="search-addon" />
+                            <button type="button" class="btn btn-outline-primary">search</button>
+                          </div>
+                    </div>
                 
-              <a class="navbar-brand " href="#">
-                <img src="/Gnezdilov_F/img/Лого.svg">
-                  
-                  
-               
+                    <div class="col-2 check_box navbar">
+                        <button type="button" class="btn btn-success text-nowrap w-100">Разместить объявление</button>
+                    </div>
+                    <div class="col-1 check_box navbar">
+                        <button type="button" class="btn btn-danger text-nowrap w-100">Войти</button>
+                    </div>
+                </div>
             </div>
-          </nav>
+            </nav>
+            
     </header>
 
     <main>
@@ -44,7 +77,7 @@
     </main>
 
     <footer>
-
+        
     </footer>
 </body>
 </html>
