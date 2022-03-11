@@ -44,7 +44,7 @@
             </div>
         </div>
         <!-- Header -->
-        <nav class="navbar-light bg-light">
+        <nav id="nav" class="navbar-light bg-light">
             <div class="container navbar-position">
                 <div class="logo">
                     <a href="../Gnezdilov_F/index.html">
@@ -52,9 +52,18 @@
                     </a>
                 </div>
 
-                <div class="navbar-categories">
-                    <button type="button" class="btn btn-outline-dark w-100">Категории</button>
-                </div>
+                <ul id="categories" class="navbar-categories">
+                    <li class="categories-item">
+                        <div class="categories-btn"><span>Категории</span></div>
+                        <ul class="inner-categories">
+                            <li class="cat-item"><a href=""><span>Для дома</span></a></li>
+                            <li class="cat-item"><a href=""><span>Личные вещи</span></a></li>
+                            <li class="cat-item"><a href=""><span>Хобби и отдых</span></a></li>
+                            <li class="cat-item"><a href=""><span>Электроника</span></a></li>
+                            <li class="cat-item-last"><a href=""><span>Животные</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
 
                 <div class="input-group input-field">
                     <input type="search" class="form-control rounded" placeholder="" style aria-label="Search" aria-describedby="search-addon" />
@@ -82,6 +91,7 @@
 
 
     <script src="js/header-buttons.js"></script>
+    <script src="js/catogories-list.js"></script>
 </body>
 
 </html>
