@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +13,7 @@
 
     <title>Продай сам!</title>
 </head>
+
 <body>
     <header>
         <!-- Upper header -->
@@ -19,10 +21,10 @@
             <div class="d-flex justify-content-between">
                 <!-- Location -->
                 <div class="d-flex">
-                        <a class="nav-link upper-navbar location" href="#">
+                    <a class="nav-link upper-navbar location" href="#">
                         <i class="icon-location"></i>
                         <span class="upper-navbar-text">Белгород</span>
-                    </a>         
+                    </a>
                 </div>
                 <!-- Profile part -->
                 <nav class="d-flex justify-content-between">
@@ -32,46 +34,54 @@
                     </a>
                     <a class="d-flex nav-link upper-navbar" href="#">
                         <i class="icon-heart-empty"></i>
-                        <span class="upper-navbar-text">Избранное</span> 
+                        <span class="upper-navbar-text">Избранное</span>
                     </a>
                     <a class="d-flex nav-link upper-navbar" href="#">
                         <i class="icon-wallet"></i>
                         <span class="upper-navbar-text">Кошелёк</span>
                     </a>
-                  </nav>
+                </nav>
             </div>
         </div>
-    <!-- Header -->
-<nav class="navbar-light bg-light">
-    <div class="container ">
-        <!-- Logo -->
-        <div class="row">
-            <div class="col-2 check_box">
-                <a href="/Gnezdilov_F/index.html">
-                    <img src="/Gnezdilov_F/img/Лого.svg">
-                </a>
-            </div>
-            <!-- Search field -->
-            <div class="col-7 check_box navbar ">
-                <div class="input-group">
-                    <input type="search" class="form-control rounded" placeholder="" style aria-label="Search" aria-describedby="search-addon" />
-                    <button type="button" class="btn btn-danger">Найти</button>
-                  </div>
-            </div>
-        
-            <div class="col-2 check_box navbar">
-                <button type="button" class="btn btn-success text-nowrap w-100">Разместить объявление</button>
-            </div>
-            <div class="col-1 check_box navbar ">
-                <div class="navbar-circle">
-                    <i class="icon-user navbar-icons"></i>
+        <!-- Header -->
+        <nav class="navbar-light bg-light">
+            <div class="container navbar-position">
+                <div class="logo">
+                    <a href="../Gnezdilov_F/index.html">
+                        <img src="../Gnezdilov_F/img/Лого.svg">
+                    </a>
                 </div>
-               
-            </div>
-        </div>
-    </div>
-    </nav>
 
-</header>
+                <div class="navbar-categories">
+                    <button type="button" class="btn btn-outline-dark w-100">Категории</button>
+                </div>
+
+                <div class="input-group input-field">
+                    <input type="search" class="form-control rounded" placeholder="" style aria-label="Search" aria-describedby="search-addon" />
+                    <button type="button" class="btn btn-danger"><i class="icon-search"></i></button>
+                </div>
+
+                <div class="navbar-buttons">
+
+                    <div class="navbar-circle navbar-ad">
+                        <img id="navbar-ad-icon" src="../Gnezdilov_F/img/place ad.svg" class='navbar-icons navbar-ad-icon' alt="">
+                    </div>
+
+                    <div class="navbar-circle navbar-profile">
+                        <img id="navbar-profile-icon" src="../Gnezdilov_F/img/profile.svg" class='navbar-icons' alt="">
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+
+    <script src="js/header-buttons.js"></script>
 </body>
+
 </html>
