@@ -46,6 +46,10 @@
     justify-content: space-between;
 }
 
+.navbar-border {
+    box-shadow: 0 5px 5px -5px #252627;
+}
+
 .navbar-categories {
     width: 120px;
     list-style-type: none;
@@ -110,6 +114,13 @@
     height: 38px;
     transition: all 0.2s ease 0s;
     cursor: pointer;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.cat-item {
+    text-decoration: none;
+    color: #252627;
     margin: 0 auto;
     padding: 0 auto;
 }
