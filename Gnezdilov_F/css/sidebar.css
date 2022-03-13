@@ -1,0 +1,18 @@
+.sidebar {
+    width: 10px;
+}
+
+.sidebar-logo {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.sidebar-item {
+    list-style-type: none;
+}
+
+.sidebar-text {
+    cursor: pointer;
+    color: #252627;
+    text-decoration: none;
+}

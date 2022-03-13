@@ -7,9 +7,9 @@
 
     <link rel="shortcut icon" href="img/preview.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sidebar.css">
 
     <title>Продай сам!</title>
 </head>
@@ -46,52 +46,210 @@
         <!-- Header -->
         <nav id="nav" class="navbar-light bg-light navbar-border">
             <div class="container navbar-position">
+                <!-- Logo -->
                 <div class="logo">
-                    <a href="../Gnezdilov_F/index.html">
-                        <img src="../Gnezdilov_F/img/Лого.svg">
+                    <a id="logo-href" href="index.html">
+                        <img id="logo" src="img\Лого.svg">
                     </a>
                 </div>
 
-                <ul id="categories" class="navbar-categories">
-                    <li class="categories-item">
-                        <div class="categories-btn"><span>Категории</span></div>
-                        <ul class="inner-categories">
-                            <li class="cat-item"><a href=""><span>Для дома</span></a></li>
-                            <li class="cat-item"><a href=""><span>Личные вещи</span></a></li>
-                            <li class="cat-item"><a href=""><span>Хобби и отдых</span></a></li>
-                            <li class="cat-item"><a href=""><span>Электроника</span></a></li>
-                            <li class="cat-item-last"><a href=""><span>Животные</span></a></li>
+                <!-- Side Bar -->
+                <div class="bg-light offcanvas offcanvas-start shadow" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-head d-flex align-items-center">
+                        <div class="sidebar-logo">
+                            <img src="img\Лого.svg" class="text-center">
+                        </div>
+                        <div class="text-end">
+                            <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                        </div>
+
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="sidebar-list">
+                            <li class="sidebar-item">
+                                <a class="sidebar-text">
+                                    <h4>Войти</h4>
+                                </a>
+
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-text">
+                                    Разместить объявление
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-text">Категории</a>
+                                <ul id="category-tree">
+                                    <li>Для дома
+                                        <ul class="categories-text">
+                                            <li><a class="categories-text" href=""><span>Ремонт и строительство</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Мебель и интерьер</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Бытовая техника</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Посуда и товары для кухни</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>Личные вещи
+                                        <ul class="categories-text">
+                                            <li><a class="categories-text" href=""><span>Одежда, обувь, аксессуары</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Детская одежда и обувь</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Товары для детей и игрушки</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Красота и здоровье</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Часы и украшения</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>Хобби и отдых
+                                        <ul class="categories-text">
+                                            <li><a class="categories-text" href=""><span>Билеты и путешествия</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Велосипеды</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Книги и журналы</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Коллекциони<wbr>рование</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Спорт и отдых</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>Транспорт
+                                        <ul class="categories-text">
+                                            <li><a class="categories-text" href=""><span>Автомобили</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Мотоциклы и мототехника</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Грузовики и спецтехника</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Водный транспорт</span></a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li>Электроника
+                                        <ul class="categories-text">
+                                            <li><a class="categories-text" href=""><span>Телефоны</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Аудио и видео</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Товары для компьютера</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Игры, приставки и программы</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Ноутбуки</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Настольные компьютеры</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Фототехника</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>Животные
+                                        <ul class="categories-text">
+                                            <li><a class="categories-text" href=""><span>Собаки</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Кошки</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Птицы</span></a></li>
+                                            <li><a class="categories-text" href=""><span>Другие животные</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
                         </ul>
+                    </div>
+
+                </div>
+
+                <!-- Categories -->
+                <ul id="categories" class="navbar-categories">
+                    <li class="nav-item dropdown dropdown-mega position-static">
+                        <div class="categories-btn" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside"><span>Категории<i class="icon-down-open"></i></span> </div>
+                        <div class="dropdown-menu inner-categories mt-4">
+                            <div class="mega-content px-4">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 py-4">
+                                            <h5><a class="categories-text" href="">Для дома</a></h5>
+                                            <ul class="categories-text">
+                                                <li><a class="categories-text" href=""><span>Ремонт и строительство</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Мебель и интерьер</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Бытовая техника</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Посуда и товары для кухни</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 py-4">
+                                            <h5><a class="categories-title categories-text" href="">Личные вещи</a></h5>
+                                            <ul class="categories-text">
+                                                <li><a class="categories-text" href=""><span>Одежда, обувь, аксессуары</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Детская одежда и обувь</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Товары для детей и игрушки</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Красота и здоровье</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Часы и украшения</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 py-4">
+                                            <h5><a class="categories-title categories-text" href="">Хобби и отдых</a></h5>
+                                            <ul class="categories-text">
+                                                <li><a class="categories-text" href=""><span>Билеты и путешествия</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Велосипеды</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Книги и журналы</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Коллекциони<wbr>рование</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Спорт и отдых</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 py-4">
+                                            <h5><a class="categories-title categories-text" href="">Транспорт</a></h5>
+                                            <ul class="categories-text">
+                                                <li><a class="categories-text" href=""><span>Автомобили</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Мотоциклы и мототехника</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Грузовики и спецтехника</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Водный транспорт</span></a></li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 py-4">
+                                            <h5><a class="categories-title categories-text" href="">Электроника</a></h5>
+                                            <ul class="categories-text">
+                                                <li><a class="categories-text" href=""><span>Телефоны</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Аудио и видео</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Товары для компьютера</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Игры, приставки и программы</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Ноутбуки</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Настольные компьютеры</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Фототехника</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-2 py-4">
+                                            <h5><a class="categories-title categories-text" href="">Животные</a></h5>
+                                            <ul class="categories-text">
+                                                <li><a class="categories-text" href=""><span>Собаки</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Кошки</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Птицы</span></a></li>
+                                                <li><a class="categories-text" href=""><span>Другие животные</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
 
-                <div class="input-group input-field">
+                <!-- Search -->
+                <div id="search-field" class="input-group input-field">
                     <input type="search" class="form-control rounded" placeholder="" style aria-label="Search" aria-describedby="search-addon" />
                     <button type="button" class="btn btn-danger"><i class="icon-search"></i></button>
                 </div>
 
-                <div class="navbar-buttons">
+                <!-- Navbar Buttons -->
+                <div id="navbar-buttons" class="navbar-buttons">
 
                     <div class="navbar-circle navbar-ad">
-                        <img id="navbar-ad-icon" src="../Gnezdilov_F/img/place ad.svg" class='navbar-icons navbar-ad-icon' alt="">
+                        <img id="navbar-ad-icon" src="img/place ad.svg" class='navbar-icons navbar-ad-icon' alt="">
                     </div>
 
                     <div class="navbar-circle navbar-profile">
-                        <img id="navbar-profile-icon" src="../Gnezdilov_F/img/profile.svg" class='navbar-icons' alt="">
+                        <img id="navbar-profile-icon" src="img/profile.svg" class='navbar-icons' alt="">
                     </div>
-
-
                 </div>
-
             </div>
 
         </nav>
     </header>
+    <main>
 
 
+
+
+
+    </main>
 
     <script src="js/header-buttons.js"></script>
-    <script src="js/catogories-list.js"></script>
+    <script src="js/width-editor.js"></script>
+    <script src="js/category-tree.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
