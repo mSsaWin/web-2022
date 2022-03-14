@@ -8,6 +8,7 @@
 }
 
 .sidebar-item {
+    transition: all 0.5s ease 0s;
     list-style-type: none;
 }
 
@@ -16,3 +17,11 @@
     color: #252627;
     text-decoration: none;
 }
+
+/* .hide::after{
+    content: '▷';
+}
+
+.show::after{
+    content:'▼';
+} */
