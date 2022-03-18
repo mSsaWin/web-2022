@@ -1,50 +1,37 @@
 tree = document.getElementById('tree');
+console.log(tree)
 liTree = tree.querySelectorAll('li');
-for(let i = 0; i< liTree.length; i++){
+
+let span = document.createElement('span');
+span.classList.add('start-hide-category');
+liTree[0].prepend(span);
+span.append(span.nextSibling);
+
+for (let i = 1; i < liTree.length; i++) {
     let span = document.createElement('span');
-    span.classList.add('show');
-    console.log();
+    if (liTree[i].parentNode.querySelector('ul'))
+        span.classList.add('start-hide-category');
     liTree[i].prepend(span);
-    if (i !== 0) 
-        liTree[i].parentNode.hidden = true;
+    liTree[i].parentNode.hidden = true;
     span.append(span.nextSibling);
 }
 
+tree.onclick = (event) => {
+    if (event.target.tagName != 'SPAN') return;
 
-rightRow = document.createElement('i');
-rightRow.className = 'icon-right-open';
-
-downRow = document.createElement('i');
-downRow.className = 'icon-down-open';
-
-tree.onclick = (event)=>{
-    if(event.target.tagName != 'SPAN') return;
-    
     let childrenContainer = event.target.parentNode.querySelector('ul');
-    console.log(childrenContainer.hidden);
-    
-    if(!childrenContainer) return;
-    
+
+    if (!childrenContainer) return;
+
     childrenContainer.hidden = !childrenContainer.hidden;
-    
-    if(childrenContainer.hidden){
-        event.target.prepend(rightRow);
-        event.target.removeChild(downRow);
-    }
-    else{
-        event.target.prepend(downRow);
-        event.target.removeChild(rightRow);
-    }
 
-    if(childrenContainer.hidden){
-        event.target.classList.add('hide');
-        event.target.classList.remove('show');
+    if (childrenContainer.hidden) {
+        event.target.style.fontWeight = 'normal';
+        event.target.classList.add('start-hide-category');
+        event.target.classList.remove('start-show-category');
+    } else {
+        event.target.style.fontWeight = 'bold';
+        event.target.classList.add('start-show-category');
+        event.target.classList.remove('start-hide-category');
     }
-    else{
-        event.target.classList.add('show');
-        event.target.classList.remove('hide');
-    }
-    
-    
-
 }
