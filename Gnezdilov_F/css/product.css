@@ -1,89 +1,146 @@
-.product-main-title{
-    font-family: 'Source Serif Pro', serif;
-    color: #252627;
-    font-size: 40px;
-    word-break:break-all;
-}
-
-.product-card{
-    margin-top: 10px;
-    height: 420px;
-    padding: 0;
-}
-
-.product-card-img{
-    min-width: auto; 
-    max-width: 100%;
-    height: 100%;
+    .product-main-title {
+        font-family: 'Source Serif Pro', serif;
+        color: #252627;
+        font-size: 40px;
+        word-break: break-all;
+    }
     
-}
-.small-img{
-    padding: 0;
-    min-width: auto; 
-    max-width: 100%;
-    height: 100%;
-}
-
-.product-favorite-circle-main i{
-    text-align: center;
-    line-height: 30px;
-    font-size: 20px;
-}
-
-.price{
-    font-family: 'Source Serif Pro', serif;
-    color: #252627;
-    font-size: 30px;
-    word-break:break-all;
-}
-
-.product-description-name{
-    font-family: 'Source Serif Pro', serif;
-    color: #252627;
-    font-size: 30px;
-}
-
-.phone-number-text{
-    padding: 0;
-    margin: 0;
-}
-
-.btn-message-text{
-    padding: 0;
-    margin: 0;
+    .product-card {
+        display: flex;
+        margin-top: 10px;
+        /* margin: 0; */
+        height: 420px;
+        padding: 0;
+    }
     
-}
-
-
-.seller-name{
-    font-family: 'Source Serif Pro', serif;
-    color: #252627;
-    font-weight: 400;
-    font-size: 17px;
-    word-break:break-all;
-}
-
-.seller-description{
-    font-family: 'Source Serif Pro', serif;
-    color: #252627;
-    font-weight: 400;
-    font-size: 13px;
-    word-break:break-all;
+    .product-slider {
+        width: 400px;
+        height: 100%;
+    }
     
-}
-
-.celler-profile-circle {
-    border-radius: 50%;
-    border: solid 2px #252627;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.celler-profile-circle i{
-    text-align: center;
-    line-height: 37px;
-    font-size: 20px;
-}
-
+    .product-slider img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .product-card-description {
+        width: 300px;
+        height: 400px;
+        padding-left: 40px;
+    }
+    
+    .price {
+        font-family: 'Source Serif Pro', serif;
+        color: #252627;
+        font-size: 30px;
+        height: 40px;
+        justify-content: space-between;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    .product-favorite-circle-main {
+        line-height: 30px;
+        font-size: 20px;
+    }
+    
+    .phone-number-text {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .btn-message-text {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .seller {
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    
+    .seller-name {
+        font-family: 'Source Serif Pro', serif;
+        color: #252627;
+        font-weight: 400;
+        font-size: 17px;
+        word-break: break-all;
+    }
+    
+    .seller-description {
+        font-family: 'Source Serif Pro', serif;
+        color: #252627;
+        font-weight: 400;
+        font-size: 13px;
+        word-break: break-all;
+    }
+    
+    .celler-profile-circle {
+        border-radius: 50%;
+        border: solid 2px #252627;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .celler-profile-circle i {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        line-height: 45px;
+        font-size: 25px;
+    }
+    
+    .product-description-name {
+        font-family: 'Source Serif Pro', serif;
+        color: #252627;
+        font-size: 30px;
+    }
+    
+    .product-description-text {
+        width: 700px;
+    }
+    
+    @media (max-width: 725px) {
+        .product-card {
+            height: 300px;
+        }
+        .product-slider {
+            width: 50%;
+            /* max-height: 300px; */
+        }
+        .product-card-description {
+            width: 50%;
+            height: 300px;
+        }
+        .product-description-text {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 500px) {
+        .product-card {
+            height: auto;
+            width: auto;
+            flex-direction: column;
+        }
+        .product-slider {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            padding: 0 auto;
+            /* max-height: 300px; */
+        }
+        .product-card-description {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+        .product-description-text {
+            width: 100%;
+        }
+    }

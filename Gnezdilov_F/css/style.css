@@ -144,6 +144,7 @@
 
 .hidden-text-ad {
     font-size: small;
+    text-decoration: none;
     /* font-family: 'Montserrat', sans-serif; */
     color: white;
     white-space: nowrap;
@@ -170,16 +171,31 @@ main .row {
     color: var(--color1);
 }
 
+.our__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
 .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     background-color: #F8F9FA;
     border: solid 2px var(--color2);
     border-radius: 20px;
+    width: calc(25%-80px);
+    max-width: 260px;
     height: 323px;
     overflow: hidden;
     position: relative;
     transition: all 0.5s ease 0s;
-    padding-left: 11px;
-    padding-right: 11px;
+    padding: 10px;
+    margin-top: 10px;
     font-family: 'Source Serif Pro', serif;
 }
 
@@ -187,11 +203,21 @@ main .row {
     box-shadow: 0 0 9px var(--color2);
 }
 
+.product-img {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
 .product-img img {
-    max-height: 219px;
-    height: auto;
+    height: 100%;
+    width: 100%;
     border-radius: 20px;
-    margin-top: 10px;
+}
+
+.product__content {
+    display: flex;
+    flex-direction: column;
 }
 
 .product-title {
@@ -205,8 +231,10 @@ main .row {
 }
 
 .product-price {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .product-price a {
@@ -247,12 +275,70 @@ main .row {
     color: var(--color1);
 }
 
+@media (max-width: 768px) {
+    .our__container {
+        max-width: 990px;
+    }
+    .product {
+        width: 200px;
+    }
+    .product-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 490px) {
+    .product {
+        width: 185px;
+    }
+    .container {
+        align-items: center;
+        justify-content: space-between;
+    }
+    .product-card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .product {
+        width: 160px;
+        height: 250px;
+    }
+    .product-img {
+        padding: 5px;
+    }
+    .container {
+        align-items: center;
+        justify-content: space-between;
+    }
+    .product-card {
+        width: 185px;
+    }
+}
+
+@media (max-width: 365px) {
+    .product {
+        width: 160px;
+        height: 250px;
+    }
+    .container {
+        align-items: center;
+        justify-content: space-between;
+    }
+    .product-card {
+        width: 165px;
+    }
+}
+
 footer {
     background-color: #F8F9FA;
     margin-top: 40px;
     width: 100%;
     height: 140px;
     padding-top: 25px;
+    vertical-align: middle;
 }
 
 .footer-copy-right {
