@@ -39,7 +39,7 @@ profileBtn.addEventListener('mouseover', () => {
     profileBtn.style.border = 'solid 0px #00a550';
     profileBtn.style.background = '#00a550';
     advBtn.style.display = 'none';
-    profileBtn.innerHTML = '<a class="hidden-text-ad" href="Auth_form/index.html"><span>Войти</span></a>';
+    profileBtn.innerHTML = '<span class="hidden-text-ad">Войти</span>';
     profileBtn.style.boxShadow = '0 0 10px #00a550';
 
     setTimeout(() => {

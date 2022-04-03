@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/auth.css">
 
     <title>Продай сам!</title>
 </head>
@@ -67,8 +68,8 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="sidebar-list">
-                            <li class="sidebar-item">
-                                <a class="sidebar-text" href="">
+                            <li class="sidebar-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                <a class="sidebar-text">
                                     <h4>Войти</h4>
                                 </a>
 
@@ -232,11 +233,43 @@
                         <img id="navbar-ad-icon" src="img/place ad.svg" class='navbar-icons navbar-ad-icon' alt="">
                     </div>
 
-                    <a href="">
-                        <div class="navbar-circle navbar-profile">
-                            <img id="navbar-profile-icon" src="img/profile.svg" class='navbar-icons' alt="">
+
+                    <div class="navbar-circle navbar-profile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <img id="navbar-profile-icon" src="img/profile.svg" class='navbar-icons' alt="">
+                    </div>
+
+                </div>
+                <!-- Auth field -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header auth-choice">
+                        <div class="sign-in active-field-color">
+                            <p id="SignIn">Войти</p>
                         </div>
-                    </a>
+                        <div class="sign-up">
+                            <p id="SignUp">Зарегистрироваться</p>
+                        </div>
+
+                    </div>
+                    <div class="offcanvas-body active-field-color">
+                        <form class="row g-3">
+                            <div class="col-12">
+                                <label for="inputEmail4" class="form-label">Эл. адрес</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputPassword4" class="form-label">Пароль</label>
+                                <input type="password" class="form-control" id="inputPassword4">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100">Войти в систему</button>
+                            </div>
+                            <div class="col miss-pass">
+                                <a class="">Забыли пароль?</a>
+                            </div>
+                        </form>
+                        <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button> -->
+
+                    </div>
                 </div>
             </div>
 
