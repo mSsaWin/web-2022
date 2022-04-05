@@ -1,5 +1,4 @@
 tree = document.getElementById('tree');
-console.log(tree)
 liTree = tree.querySelectorAll('li');
 
 let span = document.createElement('span');

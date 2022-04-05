@@ -14,7 +14,7 @@
     vertical-align: middle;
     margin: 0;
     padding-top: 20px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     /* background-color: rgb(245, 210, 210); */
 }
 
@@ -23,7 +23,8 @@
     width: 50%;
     margin: 0;
     padding-top: 20px;
-    text-decoration: underline;
+    word-wrap: break-word;
+    /* text-decoration: underline; */
     /* background-color: rgb(205, 228, 154); */
 }
 
@@ -32,4 +33,5 @@
     /* text-decoration: underline; */
     text-align: center;
     font-size: small;
+    color: #000;
 }

@@ -143,4 +143,7 @@
         .product-description-text {
             width: 100%;
         }
+        .product-main-title {
+            font-size: xx-large;
+        }
     }
