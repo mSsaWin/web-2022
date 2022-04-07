@@ -70,8 +70,6 @@
     transition: all 0.5s ease 0s;
 }
 
-.sidebar-item:hover {}
-
 .sidebar-text {
     cursor: pointer;
     color: #252627;

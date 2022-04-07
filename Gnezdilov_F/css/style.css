@@ -166,20 +166,6 @@ main .row {
     padding-top: 14px;
 }
 
-.categories_name {
-    font-family: 'Source Serif Pro', serif;
-    color: var(--color1);
-}
-
-.our__container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0px auto;
-}
-
 .product {
     display: flex;
     flex-direction: column;
