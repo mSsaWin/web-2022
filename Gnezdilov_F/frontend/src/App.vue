@@ -1,17 +1,22 @@
 <template>
   <div id="app">
     <Header/>
+    <Main/>
   </div>
 </template>
 
 <script>
 
-import Header from '@/views/Header'
+import Header from '@/components/Header/Header'
+import Main from '@/components/Main/Main'
+
+
   export default{
     name: 'app',
    
     components: {
-      Header
+      Header,
+      Main
     }
   }
 </script>
@@ -52,4 +57,5 @@ import Header from '@/views/Header'
         max-width: 857px;
     }
 }
+
 </style>

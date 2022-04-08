@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="logo">
                     <a id="logo-href" href="#">
-                        <img id="logo" src="..\src\assets\logo.svg">
+                        <img id="logo" src="../assets/logo.svg">
                     </a>
                 </div>
                 <CategoryList
@@ -25,12 +25,12 @@
 
                 <div id="navbar-buttons" class="navbar-buttons">
                     <div class="navbar-circle navbar-ad">
-                        <img id="navbar-ad-icon" src="..\src\assets\place ad.svg" class='navbar-icons navbar-ad-icon' alt="">
+                        <img id="navbar-ad-icon" src="../assets/place ad.svg" class='navbar-icons navbar-ad-icon' alt="">
                     </div>
 
 
                     <div class="navbar-circle navbar-profile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                        <img id="navbar-profile-icon" src="..\src\assets\profile.svg" class='navbar-icons' alt="">
+                        <img id="navbar-profile-icon" src="../assets/profile.svg" class='navbar-icons' alt="">
                     </div>
 
                 </div>

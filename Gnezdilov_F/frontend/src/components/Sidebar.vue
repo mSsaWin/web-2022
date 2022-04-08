@@ -2,7 +2,7 @@
     <div class="bg-light offcanvas offcanvas-start shadow" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-head d-flex align-items-center">
                         <div class="sidebar-logo">
-                            <img src="..\src\assets\logo.svg" class="text-center">
+                            <img src="../assets/logo.svg" class="text-center">
                         </div>
                         <div class="text-end">
                             <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
