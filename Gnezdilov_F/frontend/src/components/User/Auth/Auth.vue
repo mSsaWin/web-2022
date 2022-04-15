@@ -1,19 +1,18 @@
 <template>
-    <!-- Auth field -->
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <div class="offcanvas-header auth-choice">
 
-                        <div class="sign-in active-field-color" id="SignIn">
+                        <div class="sign-in" id="SignIn" v-bind:class="{'active-field-color': current_field}" v-on:click="swapFields()">
                             <p>Войти</p>
                         </div>
-                        <div class="sign-up" id="SignUp">
+                        <div class="sign-up" id="SignUp" v-bind:class="{'active-field-color': !current_field}" v-on:click="swapFields()">
                             <p>Зарегистрироваться</p>
                         </div>
                         <button type="button" class="btn-close me-1 text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
 
                     </div>
-                    <div class="offcanvas-body active-field-color">
-                        <form class="row g-3 signin-field">
+                    <div class="offcanvas-body active-field-color" >
+                        <form class="row g-3 signin-field" v-show="current_field"> 
                             <div class="col-12">
                                 <label for="inputEmail4" class="form-label">Эл. адрес</label>
                                 <input type="email" class="form-control" id="inputEmail4">
@@ -30,7 +29,7 @@
                             </div>
                         </form>
 
-                        <form class="row g-3 signup-field">
+                        <form class="row g-3 signup-field" v-show="!current_field">
                             <div class="col-12">
                                 <label for="inputName" class="form-label">Имя</label>
                                 <input type="name" class="form-control" id="inputName">
@@ -61,14 +60,23 @@
 </template>
 
 <script>
-
-export default {
-   
+export default{
+    data(){
+        return {
+            current_field: true
+        }
+    }, 
+    methods:{
+        swapFields(){
+            this.current_field = !this.current_field
+        }
+    }
 }
 </script>
 
 <style scoped>
 .auth-choice {
+    cursor: pointer;
     display: flex;
     justify-content: space-around;
     padding: 0;

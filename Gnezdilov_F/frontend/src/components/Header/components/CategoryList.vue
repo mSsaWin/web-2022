@@ -6,7 +6,7 @@
                 <div class="mega-content px-4">
                     <div class="container">
                         <div class="row">
-                            <div v-for="category in categories" :key="category" class="col-12 col-sm-6 col-md-4 col-lg-2 py-4" >
+                            <div v-for="category in categories" :key="category.id" class="col-12 col-sm-6 col-md-4 col-lg-2 py-4" >
                                 <h5><a class="categories-text" href="#">{{category.category}}</a></h5>
                                 <ul class="categories-text">
                                     <li v-for="subcategory in category.subCategory" :key="subcategory">

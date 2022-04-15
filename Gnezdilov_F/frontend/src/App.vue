@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <Header/>
+    <router-view/>
   </div>
 </template>
 
 <script>
 
-import Header from '@/views/Header'
+import HomeView from '@/views/HomeView'
+
+
+
   export default{
     name: 'app',
-   
-    components: {
-      Header
+    components:{
+      HomeView
     }
   }
 </script>
@@ -52,4 +54,5 @@ import Header from '@/views/Header'
         max-width: 857px;
     }
 }
+
 </style>

@@ -262,9 +262,6 @@ main .row {
 }
 
 @media (max-width: 768px) {
-    .our__container {
-        max-width: 990px;
-    }
     .product {
         width: 200px;
     }

@@ -11,15 +11,15 @@
             </div>
             <!-- Profile part -->
             <nav class="d-flex justify-content-between">
-                <a class="d-flex nav-link upper-navbar" href="#">
+                <a class="d-flex nav-link upper-navbar message" href="#">
                     <i class="icon-mail"></i>
                     <span class="upper-navbar-text">Сообщения</span>
                 </a>
-                <a class="d-flex nav-link upper-navbar" href="#">
+                <a class="d-flex nav-link upper-navbar favorite" href="#">
                     <i class="icon-heart-empty"></i>
                     <span class="upper-navbar-text">Избранное</span>
                 </a>
-                <a class="d-flex nav-link upper-navbar" href="#">
+                <a class="d-flex nav-link upper-navbar wallet" href="#">
                     <i class="icon-wallet"></i>
                     <span class="upper-navbar-text">Кошелёк</span>
                 </a>
@@ -32,7 +32,7 @@
 
 </script>
 
-<style scoped>
+<style>
 .upper-navbar {
     color: var(--color1);
     font-family: 'Source Serif Pro', serif;
@@ -40,5 +40,17 @@
 }
 .location {
     font-size: 13px;
+}
+
+.message:hover{
+    color:#5c77a4;
+}
+
+.favorite:hover{
+    color: crimson;
+}
+
+.wallet:hover{
+    color: #316314;
 }
 </style>
