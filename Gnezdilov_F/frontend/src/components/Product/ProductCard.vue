@@ -1,35 +1,41 @@
 <template>
-     
     <div class="col-xl-3 col-md-4 col-sm-4 col-6 product-card">
         <div class="product">
+            <router-link :to="{name: 'product', params:{id: productCard.id}}" class="product-link">
             <div class="product-img">
-                <a href="product.html"><img :src="productCard.image"></a>
+                <img :src="require('@/assets/' + productCard.image[0])">
             </div>
+            </router-link>
             <div class="product__content">
+                <router-link :to="{name: 'product', params:{id: productCard.id}}" class="product-link">
                 <div class="product-title">
-                    <a href="product.html">{{productCard.title}}</a>
+                   <span>{{productCard.title}}</span>
                 </div>
+                </router-link>
                 <div class="product-price">
-                    <a href="product.html">{{productCard.price}}</a>
-                    <div class="product-favorite">
-                        <div class="product-favorite-circle">
-                            <i class="icon-heart-empty"></i>
-                        </div>
-
-                    </div>
+                    <router-link :to="{name: 'product', params:{id: productCard.id}}" class="product-link">
+                   <span>{{productCard.price}}</span>
+                    </router-link>
+                    <Favorite v-bind:isFavorite="productCard.isFavorite" />
                 </div>
+                <router-link :to="{name: 'product', params:{id: productCard.id}}" class="product-link">
                 <div class="product-publication">
-                    <a href="#">{{productCard.publication}}</a>
+                   <span>{{productCard.publication}}</span>
                 </div>
+                </router-link>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-
+import Favorite from '@/components/Product/Favorite'
 export default {
-    props: ['productCard']
+    name: 'ProductCard',
+    props: ['productCard'],
+    components:{
+        Favorite
+    }
 }
 
 </script>
@@ -52,6 +58,11 @@ export default {
     padding: 10px;
     margin-top: 10px;
     font-family: 'Source Serif Pro', serif;
+    text-decoration: none;
+}
+
+.product-link{
+    text-decoration: none;
 }
 
 .product:hover {
@@ -71,15 +82,17 @@ export default {
 }
 
 .product__content {
+    width: 80%;
     display: flex;
     flex-direction: column;
 }
 
 .product-title {
+    text-align: center;
     margin-top: 4px;
 }
 
-.product-title a {
+.product-title span {
     color: #252627;
     font-weight: 550;
     text-decoration: none;
@@ -92,38 +105,17 @@ export default {
     align-items: center;
 }
 
-.product-price a {
+.product-price span {
     text-decoration: underline;
     color: var(--color1);
 }
 
-.product-price a:hover {
+.product-price span:hover {
     color: crimson;
 }
 
-.product-favorite-circle {
-    border-radius: 50%;
-    border: solid 2px #AEC5EB;
-    height: 35px;
-    width: 35px;
-    text-align: center;
-    vertical-align: middle;
-}
 
-.product-favorite-circle:hover {
-    box-shadow: 0 0 7px crimson;
-    color: crimson;
-    transition: all 0.5s ease 0s;
-    border-color: crimson;
-}
-
-.product-favorite-circle i {
-    text-align: center;
-    line-height: 35px;
-    font-size: 20px;
-}
-
-.product-publication a {
+.product-publication span {
     text-decoration: none;
     font-size: 14px;
     font-weight: 400;
@@ -136,7 +128,7 @@ export default {
     }
     .product-img {
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 }
 

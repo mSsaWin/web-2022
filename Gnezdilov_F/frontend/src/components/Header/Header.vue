@@ -4,11 +4,13 @@
         <nav id="nav" class="navbar-light bg-light navbar-border" v-bind="widthListener()">
             <div class="container navbar-position">
                 <!-- Logo -->
+                <router-link to='/'>
                 <div class="logo" v-show="bigSize">
                     <a id="logo-href" href="">
                         <img id="logo" :src="mainLogo">
                     </a>
                 </div>
+                </router-link>
                 <div class="burger_menu" v-show="!bigSize">
                     <img :src="burgerMenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 </div>

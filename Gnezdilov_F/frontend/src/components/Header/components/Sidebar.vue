@@ -1,9 +1,11 @@
 <template>
     <div class="bg-light offcanvas offcanvas-start shadow" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" v-bind="categoryTree()">
                     <div class="offcanvas-head d-flex align-items-center">
+                        <router-link to='/' class="sidebar-logo">
                         <div class="sidebar-logo">
-                            <img src="..\src\assets\logo.svg" class="text-center">
+                            <img src="..\src\assets\logo.svg">
                         </div>
+                        </router-link>
                         <div class="text-end">
                             <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
                         </div>
@@ -124,6 +126,10 @@
 
 .sidebar {
     width: 10px;
+}
+
+.logo-link{
+    text-align: center;
 }
 
 .sidebar-logo {

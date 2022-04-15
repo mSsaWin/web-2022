@@ -1,22 +1,19 @@
 <template>
   <div id="app">
-    <Header/>
-    <Main/>
+    <router-view/>
   </div>
 </template>
 
 <script>
 
-import Header from '@/components/Header/Header'
-import Main from '@/components/Main/Main'
+import HomeView from '@/views/HomeView'
+
 
 
   export default{
     name: 'app',
-   
-    components: {
-      Header,
-      Main
+    components:{
+      HomeView
     }
   }
 </script>
