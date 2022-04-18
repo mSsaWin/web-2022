@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+    <component :is="layout">
     <router-view/>
+    </component>
   </div>
 </template>
 
@@ -14,6 +16,11 @@ import HomeView from '@/views/HomeView'
     name: 'app',
     components:{
       HomeView
+    },
+    computed: {
+      layout() {
+        return this.$route.meta.layout || "default-layout"
+      }
     }
   }
 </script>

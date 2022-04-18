@@ -16,7 +16,10 @@
                     <span class="upper-navbar-text">Сообщения</span>
                 </a>
                 <a class="d-flex nav-link upper-navbar favorite" href="#">
-                    <i class="icon-heart-empty"></i>
+                    <div class="favorite-icon-with-score m-0 p-0">
+                        <i class="icon-heart-empty m-0"></i>
+                        <sub>{{this.$store.state.favoriteProducts.count}}</sub>
+                    </div>
                     <span class="upper-navbar-text">Избранное</span>
                 </a>
                 <a class="d-flex nav-link upper-navbar wallet" href="#">
@@ -48,6 +51,10 @@
 
 .favorite:hover{
     color: crimson;
+}
+
+.favorite-icon-with-score sub{
+    right: 12%;
 }
 
 .wallet:hover{

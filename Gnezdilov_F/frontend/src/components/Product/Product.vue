@@ -10,7 +10,7 @@
                 <div class="price">
                     <p>{{product[id-1].price}}</p>
                 </div>
-                <Favorite v-bind:isFavorite="product[id-1].isFavorite"/>
+                <Favorite v-bind:product="{id: product[id-1].id, isFavorite: product[id-1].isFavorite}" />
             </div>
             <button type="button" class="btn btn-outline-dark w-100" v-on:click="hidePhone = !hidePhone">
                         <p class="phone-number-text">Показать телефон <br>{{printPhone()}}</p> 

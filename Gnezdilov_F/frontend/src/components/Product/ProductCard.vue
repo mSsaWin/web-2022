@@ -16,7 +16,7 @@
                     <router-link :to="{name: 'product', params:{id: productCard.id}}" class="product-link">
                    <span>{{productCard.price}}</span>
                     </router-link>
-                    <Favorite v-bind:isFavorite="productCard.isFavorite" />
+                    <Favorite v-bind:product="{id: productCard.id, isFavorite: productCard.isFavorite}" />
                 </div>
                 <router-link :to="{name: 'product', params:{id: productCard.id}}" class="product-link">
                 <div class="product-publication">

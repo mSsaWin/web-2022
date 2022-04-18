@@ -5,8 +5,13 @@
                     <div class="navbar-circle navbar-ad" data-bs-toggle="tooltip" data-bs-placement="right" title="Разместить объявление">
                         <img id="navbar-ad-icon" :src="advBtnImg" class='navbar-icons navbar-ad-icon' alt="">
                     </div>
-
-                    <div class="navbar-circle navbar-profile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" data-bs-placement="right" title="Войти">
+                    
+                    <router-link to="/profile" v-if="this.$store.state.isAuth">
+                        <div class="navbar-circle navbar-profile"  data-bs-placement="right" title="Войти">
+                            <img id="navbar-profile-icon" :src="profileBtnImg" class='navbar-icons' alt="">
+                        </div>
+                    </router-link>
+                    <div class="navbar-circle navbar-profile" data-bs-toggle="offcanvas" :data-bs-target="offcanvasRight" :aria-controls="ariaOffcanvasRight" data-bs-placement="right" title="Войти" v-else>
                         <img id="navbar-profile-icon" :src="profileBtnImg" class='navbar-icons' alt="">
                     </div>
 
@@ -21,10 +26,13 @@
         data(){
             return{
                 advBtnImg,
-                profileBtnImg
+                profileBtnImg,
+                offcanvasRight: "#offcanvasRight",
+                ariaOffcanvasRight: "offcanvasRight"
             }
         },
         methods: {
+            
             
             animateBtn(advBtn, profileBtn){
                 

@@ -3,7 +3,7 @@
                     <div class="offcanvas-head d-flex align-items-center">
                         <router-link to='/' class="sidebar-logo">
                         <div class="sidebar-logo">
-                            <img src="..\src\assets\logo.svg">
+                            <img :src="mainLogo">
                         </div>
                         </router-link>
                         <div class="text-end">
@@ -12,7 +12,14 @@
                     </div>
                     <div class="offcanvas-body" >
                         <ul class="sidebar-list">
-                            <li class="sidebar-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <router-link to="/profile" v-if="this.$store.state.isAuth" class="sidebar-text">
+                                <li class="sidebar-item">
+                                <a class="sidebar-text">
+                                    <h4>Войти</h4>
+                                </a>
+                                </li>
+                            </router-link>
+                            <li class="sidebar-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" v-else>
                                 <a class="sidebar-text">
                                     <h4>Войти</h4>
                                 </a>
@@ -45,12 +52,14 @@
 </template>
 
 <script>
+    import mainLogo from '@/assets/logo.svg'
     export default {
         props: ['categories'],
         data(){
         return {
             tree: '',
             liTree:'',
+            mainLogo
             }
         },
         

@@ -2,10 +2,10 @@
         <footer>
         <div class="container">
             <div class="row">
-                <div class="col footer-contacts">
+                <div class="col-4 footer-contacts">
                     <p class="footer-copy-right">&copy;Филипп Гнездилов</p>
                 </div>
-                <div class="col footer-contacts text-end">
+                <div class="col-8 footer-contacts text-end">
                     <p class="footer-contacts-content">Контакты</p>
                     <p class="footer-contacts-content">
                         <i class="icon-phone">+7 (4222)-22-22</i>

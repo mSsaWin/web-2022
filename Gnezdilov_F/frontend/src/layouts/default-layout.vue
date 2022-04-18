@@ -1,23 +1,23 @@
 <template>
-<div>
-    <Main/>
+<div class="product-layout">
+  <Header/>
+  <slot/>
+  <Footer/>
 </div>
-    
 </template>
 
 <script>
-
 import Header from '@/components/Header/Header'
-import Main from '@/components/Main/Main'
 import Footer from '@/components/Footer/Footer'
-
-
-  export default{  
-    name: 'HomeView',
+export default {
+    name: 'DefaultLayout',
     components: {
       Header,
-      Main,
       Footer
     }
-  }
+}
 </script>
+
+<style>
+
+</style>

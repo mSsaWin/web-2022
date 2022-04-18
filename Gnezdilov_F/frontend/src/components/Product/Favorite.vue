@@ -1,6 +1,6 @@
 <template>
     <div class="product-favorite">
-        <div :class="{product__favorite__circle__on: isFavorite, product__favorite__circle: true}" v-on:click="isFavorite = !isFavorite">
+        <div :class="{product__favorite__circle__on: isFavorite, product__favorite__circle: true}" v-on:click="favoriteClick()">
             <i class="icon-heart-empty"></i>
         </div>
 
@@ -8,7 +8,33 @@
 </template>
 <script>
 export default {
-    props: ['isFavorite'],
+    props: ['product'],
+    data(){
+        return{
+            isFavorite: null
+        }
+    },
+    methods: {
+        favoriteClick(){
+            this.isFavorite = !this.isFavorite
+            this.checkFavorite()
+        },
+        checkFavorite(){
+            if (this.isFavorite){
+                this.$store.commit('addFavorite', this.product.id)
+            }
+            else{
+                this.$store.commit('removeFavorite', this.product.id)
+            }
+        }
+        
+    },
+    beforeMount(){
+        this.isFavorite = this.product.isFavorite
+        if (this.isFavorite){
+            this.$store.commit('addFavorite', this.product.id)
+        } 
+    }
 }
 </script>
 
